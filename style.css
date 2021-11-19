@@ -71,6 +71,7 @@ body {
   color: #61d4b3e7;
   animation: slidefirstH 3s infinite alternate;
   animation-delay: 2s;
+  animation-timing-function: linear;
 }
 
 .firstA {
@@ -78,24 +79,28 @@ body {
   animation: slidefirstA 3s infinite alternate;
   animation-delay: 2s;
   left: 17.667%;
+  animation-timing-function: linear;
 }
 .firstN {
   color: #fb8d62e5;
   animation: slidefirstN 3s infinite alternate;
   animation-delay: 2s;
   left: 35.334%;
+  animation-timing-function: linear;
 }
 .secondN {
   color: #fd2eb5e1;
   animation: slidesecondN 3s infinite alternate;
   animation-delay: 2s;
   left: 53.001%;
+  animation-timing-function: linear;
 }
 .secondA {
   color: #6173f4;
   animation: slidesecondA 3s infinite alternate;
   animation-delay: 2s;
   left: 70.668%;
+  animation-timing-function: linear;
 }
 .secondH {
   color: #8accf1da;
@@ -103,6 +108,7 @@ body {
   animation-delay: 2s;
   animation-direction: alternate;
   left: 88.335%;
+  animation-timing-function: linear;
 }
 
 @keyframes fade-in {
