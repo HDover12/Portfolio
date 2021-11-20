@@ -1,15 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: black;
 }
 .welcome {
   width: 100%;
-  height: 100vh;
+  height: 93vh;
 }
 
 .headerContent {
-  width: 80%;
-  left: 10%;
+  width: 100%;
+
   position: absolute;
   top: 30%;
   height: 50%;
@@ -17,34 +21,113 @@ body {
 
 .hello {
   font-family: "Caveat", cursive;
-  font-size: 8vh;
+  font-size: 6vw;
   margin: 0 auto;
-  max-width: 360px;
+  width: 27vw;
   overflow: hidden;
   white-space: nowrap;
   animation: typing 1.3s steps(12, end);
   color: aliceblue;
-  text-align: center;
+  text-shadow: 4px 4px rgba(211, 211, 211, 0.281);
 }
 
 .hannah {
-  font-size: 12vh;
-  height: 20vh;
-  animation: fade-in 4s forwards;
+  font-size: 7em;
+  height: 129px;
+  animation: fade-in 5s forwards;
   animation-delay: 1.2s;
   font-family: "Slabo 27px", serif;
   opacity: 0%;
   margin: 0 auto;
   position: relative;
-  max-width: 700px;
+  width: 80%;
+  max-width: 907px;
 }
 .intro {
-  background-color: rgb(129, 184, 233);
   width: 80%;
   height: 300px;
   margin: 40px auto;
   border: black 1px solid;
   border-radius: 8px;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+}
+
+.arrow {
+  color: aliceblue;
+  transform: rotate(90deg);
+  font-size: 90px;
+}
+
+a:visited {
+  color: aliceblue;
+}
+.arrowBox {
+  animation: bounce 0.5s alternate forwards steps(20, end);
+  animation-delay: 8s;
+  animation-iteration-count: 4;
+  width: 50px;
+  margin: 0 auto;
+  opacity: 0;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+  margin-right: 25px;
+}
+
+hr {
+  width: 80%;
+  margin-top: 60px;
+}
+.projectTitle {
+  color: aliceblue;
+  text-align: center;
+  font-size: 4em;
+  font-family: "Slabo 27px", serif;
+}
+.projects {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.cards {
+  background-color: #8acbf1af;
+  color: black;
+  width: 200px;
+  height: 200px;
+  display: inline-table;
+  text-align: center;
+  font-size: 2em;
+  vertical-align: middle;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.cards:hover {
+  box-shadow: 8px 4px 4px aliceblue;
+  transform: translateX(4px);
+  background-color: #8acbf1e3;
+}
+
+ul {
+  list-style: none;
+}
+
+.listItems {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+#footer {
+  position: sticky;
+  top: 98vh;
+  right: 50px;
+  color: aliceblue;
+  font-size: 20px;
+  text-align: right;
+  width: 100%;
 }
 
 @keyframes typing {
@@ -52,7 +135,7 @@ body {
     width: 0;
   }
   to {
-    width: 360px;
+    width: 27vw;
   }
 }
 
@@ -65,50 +148,67 @@ body {
   position: absolute;
   text-align: center;
   height: fit-content;
-  width: 8vh;
+  width: 200px;
+  transition: 1.2s;
+}
+
+.firstA:hover,
+.firstH:hover,
+.firstN:hover,
+.secondA:hover,
+.secondH:hover,
+.secondN:hover {
+  transform: rotateY(360deg);
 }
 .firstH {
   color: #61d4b3e7;
-  animation: slidefirstH 3s infinite alternate;
-  animation-delay: 2s;
+  animation: slidefirstH 3s alternate;
+  animation-iteration-count: 2;
+  animation-delay: 1.5s;
   animation-timing-function: linear;
+  left: 5%;
 }
 
 .firstA {
-  color: #fdd265e7;
-  animation: slidefirstA 3s infinite alternate;
-  animation-delay: 2s;
-  left: 17.667%;
+  color: #fb8d62e5;
+  animation: slidefirstA 3s alternate;
+  animation-delay: 1.5s;
+  animation-iteration-count: 2;
+  left: 18.2%;
   animation-timing-function: linear;
 }
 .firstN {
-  color: #fb8d62e5;
-  animation: slidefirstN 3s infinite alternate;
-  animation-delay: 2s;
-  left: 35.334%;
+  color: #8accf1da;
+  animation: slidefirstN 3s alternate;
+  animation-delay: 1.5s;
+  left: 31.4%;
   animation-timing-function: linear;
+  animation-iteration-count: 2;
 }
 .secondN {
-  color: #fd2eb5e1;
-  animation: slidesecondN 3s infinite alternate;
-  animation-delay: 2s;
-  left: 53.001%;
+  color: #fdd265e7;
+  animation: slidesecondN 3s alternate;
+  animation-delay: 1.5s;
+  left: 45.6%;
   animation-timing-function: linear;
+  animation-iteration-count: 2;
 }
 .secondA {
   color: #6173f4;
-  animation: slidesecondA 3s infinite alternate;
-  animation-delay: 2s;
-  left: 70.668%;
+  animation: slidesecondA 3s alternate;
+  animation-delay: 1.5s;
+  left: 57.8%;
   animation-timing-function: linear;
+  animation-iteration-count: 2;
 }
 .secondH {
-  color: #8accf1da;
-  animation: slidesecondH 3s infinite alternate;
-  animation-delay: 2s;
+  color: #fd2eb5e1;
+  animation: slidesecondH 3s alternate;
+  animation-delay: 1.5s;
   animation-direction: alternate;
-  left: 88.335%;
+  right: 5%;
   animation-timing-function: linear;
+  animation-iteration-count: 2;
 }
 
 @keyframes fade-in {
@@ -120,35 +220,43 @@ body {
   }
 }
 @keyframes slidefirstH {
-  0% {
-    left: 0%;
-  }
   100% {
-    left: 88.335%;
+    left: 70%;
   }
 }
 @keyframes slidefirstA {
   100% {
-    left: 70.668%;
+    left: 57.8%;
   }
 }
 @keyframes slidefirstN {
   100% {
-    left: 53.001%;
+    left: 45.6%;
   }
 }
 @keyframes slidesecondN {
   100% {
-    left: 35.334%;
+    left: 31.4%;
   }
 }
 @keyframes slidesecondA {
   100% {
-    left: 17.667%;
+    left: 18.2%;
   }
 }
 @keyframes slidesecondH {
   100% {
-    left: 0%;
+    right: 70%;
   }
 }
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 100%;
+  }
+}
+
