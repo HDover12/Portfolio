@@ -8,7 +8,7 @@ body {
 }
 .welcome {
   width: 100%;
-  height: 89vh;
+  height: 100vh;
 }
 
 .headerContent {
@@ -20,14 +20,15 @@ body {
 
 .hello {
   font-family: "Caveat", cursive;
-  font-size: 10vw;
+  font-size: 8vw;
   margin: 0 auto;
-  width: 34vw;
+  width: 39vw;
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 1.3s steps(12, end);
+  animation: typing 2s steps(12, end);
   color: aliceblue;
   text-shadow: 4px 4px rgba(211, 211, 211, 0.281);
+  font-weight: lighter;
 }
 
 .hannah {
@@ -43,67 +44,65 @@ body {
   position: static;
   text-align: center;
 }
-.intro {
-  width: 80%;
-  height: 300px;
-  margin: 40px auto;
-  border: black 1px solid;
-  border-radius: 8px;
-  display: flex;
-  background-color: black;
-  justify-content: center;
-}
 
-.arrow {
-  color: aliceblue;
-  transform: rotate(90deg);
-  font-size: 90px;
-  padding-bottom: 20px;
-}
-
-a:visited {
-  color: aliceblue;
-}
 .arrowBox {
   animation: bounce 0.5s alternate forwards steps(20, end);
   animation-delay: 3s;
   animation-iteration-count: 4;
   width: 50px;
-  margin: 0 auto;
+  height: 50px;
   opacity: 0;
+  position: absolute;
+  bottom: 15vh;
+  left: 48vw;
 }
-a {
-  text-decoration: none;
+
+.arrowRotate {
+  transform: rotate(90deg);
+}
+.arrow {
   color: aliceblue;
-  margin-right: 25px;
+  font-size: 90px;
+  text-decoration: none;
+}
+
+.arrow:visited {
+  color: aliceblue;
 }
 
 hr {
   width: 80%;
   margin-top: 60px;
 }
+
+.intro {
+  width: 90vw;
+  height: 90vw;
+  margin: 0 auto;
+  background-color: black;
+}
+
 .projectTitle {
   color: aliceblue;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   font-family: "Slabo 27px", serif;
 }
 .projects {
   margin: 0 auto;
   padding: 0;
+  display: table;
 }
 
 .cards {
   background-color: #8acbf1af;
   color: black;
-  width: 200px;
-  height: 200px;
-  display: inline-table;
   text-align: center;
-  font-size: 2em;
-  vertical-align: middle;
-  margin-right: 20px;
+  font-size: 1.5em;
+  margin: 20px 0;
   border-radius: 4px;
+  padding: 5px;
+  width: 50vw;
 }
 
 .cards:hover {
@@ -123,12 +122,25 @@ ul {
 
 #footer {
   position: sticky;
-  top: 98vh;
+  bottom: 10px;
   right: 50px;
-  color: aliceblue;
-  font-size: 20px;
   text-align: right;
   width: 100%;
+}
+
+.top:visited {
+  color: aliceblue;
+}
+
+.topStyle {
+  margin-right: 25px;
+  font-size: 3em;
+  color: aliceblue;
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+.top {
+  text-decoration: none;
 }
 
 @keyframes typing {
@@ -136,7 +148,7 @@ ul {
     width: 0;
   }
   to {
-    width: 34vw;
+    width: 39vw;
   }
 }
 
