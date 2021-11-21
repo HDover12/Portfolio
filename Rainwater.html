@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 1001px)"
+      href="rainwaterstyle.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1000px)"
+      href="rainwaterstyle.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="title">Rainwater Challenge</h1>
+
+      <p class="description">
+        <strong class="challengeTitle"> The Challenge</strong><br /><br />
+        For this challenge, I created a capturingRainwater() function that takes
+        in an array of heights, and returns the amount of rainwater that could
+        be contained in that array. For example, the array [4, 2, 1, 3, 0, 1, 2]
+        would give the folowing histogram:
+        <br />
+        <br /><img
+          src="https://static-assets.codecademy.com/curriculum/code-challenges/Image%202.svg"
+          alt=""
+        /><br />
+        <br />
+        This means that a total of 6 units of water could be captured in this
+        example. <br /><br />
+        <strong class="challengeTitle"> My Solution</strong><br /><br />
+        My approach to this challenge was to loop through each number in the
+        array and slice out the section before that number and the section after
+        that number. I then found the maxium number before and after. Water
+        would only collect up to the second highest of those two maximum
+        numbers. I could then subtract the second highest number from the height
+        of the current number and that would give me how much water that spot
+        could hold. All that would be left would be to add up each spot.
+        <br /><br />
+        Feel free to test it out below by entering numbers for the array. The
+        function that I wrote is also pictured below.
+      </p>
+
+      <div class="inputInstruct">Plug in heights:</div>
+      <div>
+        <input id="input" type="number" /><button
+          id="addNumber"
+          onclick="capturingRainwater(testArray)"
+        >
+          Add Number to List
+        </button>
+        <button id="removeLastNumber" onclick="removeLastNumber()">
+          Remove Last Number
+        </button>
+        <button id="removeAllNumbers" onclick="removeAllNumbers()">
+          Remove All Numbers
+        </button>
+      </div>
+      <h2 id="result"></h2>
+
+      <img src="codesnip.jpg" alt="picture of Rainwater code" />
+    </div>
+    <script src="Rainwaterjs.js"></script>
+  </body>
+</html>
