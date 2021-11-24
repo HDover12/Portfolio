@@ -172,7 +172,13 @@ ul {
 .firstN:active,
 .secondA:active,
 .secondH:active,
-.secondN:active {
+.secondN:active,
+.firstA:hover,
+.firstH:hover,
+.firstN:hover,
+.secondA:hover,
+.secondH:hover,
+.secondN:hover {
   transform: rotateY(360deg);
 }
 .firstH {
