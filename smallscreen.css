@@ -34,7 +34,7 @@ body {
 .hannah {
   font-size: 15vw;
   height: 129px;
-  animation: fade-in 5s forwards;
+  animation: fade-in 9s forwards linear;
   animation-delay: 1.2s;
   font-family: "Slabo 27px", serif;
   opacity: 0%;
@@ -202,10 +202,13 @@ ul {
 }
 
 @keyframes fade-in {
-  from {
+  0% {
     opacity: 0%;
   }
-  to {
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
     opacity: 100%;
   }
 }
