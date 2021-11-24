@@ -167,18 +167,20 @@ ul {
   position: static;
 }
 
-.firstA:active,
-.firstH:active,
-.firstN:active,
-.secondA:active,
-.secondH:active,
-.secondN:active,
 .firstA:hover,
 .firstH:hover,
 .firstN:hover,
 .secondA:hover,
 .secondH:hover,
-.secondN:hover {
+.secondN:hover,
+.firstA:active,
+.firstH:active,
+.firstN:active,
+.secondA:active,
+.secondH:active,
+.secondN:active {
+  transform: rotateY(360deg);
+} {
   transform: rotateY(360deg);
 }
 .firstH {
