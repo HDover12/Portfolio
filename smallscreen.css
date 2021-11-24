@@ -167,12 +167,12 @@ ul {
   position: static;
 }
 
-.firstA:hover,
-.firstH:hover,
-.firstN:hover,
-.secondA:hover,
-.secondH:hover,
-.secondN:hover {
+.firstA:active,
+.firstH:active,
+.firstN:active,
+.secondA:active,
+.secondH:active,
+.secondN:active {
   transform: rotateY(360deg);
 }
 .firstH {
