@@ -180,8 +180,6 @@ ul {
 .secondH:active,
 .secondN:active {
   transform: rotateY(360deg);
-} {
-  transform: rotateY(360deg);
 }
 .firstH {
   color: #61d4b3e7;
