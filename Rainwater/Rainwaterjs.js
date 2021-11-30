@@ -2,11 +2,14 @@ let beforeNumber = [];
 let afterNumber = [];
 let testArray = [];
 let canHold = 0;
+let input1;
 
 function capturingRainwaterArray() {
   let input1 = document.getElementById("input").value;
-  testArray.push(Number(input1));
-  capturingRainwater(testArray);
+  if (input1) {
+    testArray.push(Number(input1));
+    capturingRainwater(testArray);
+  }
 }
 function capturingRainwater(heights) {
   canHold = 0;
