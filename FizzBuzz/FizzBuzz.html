@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 1001px)"
+      href="FizzBuzzstyle.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1000px)"
+      href="FizzBuzzstyle.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+     <title>FizzBuzz</title>
+  </head>
+  <body>
+    <div class="wrapper">
+          <a class="home" href="../index.html">Home</a>
+      <h1 class="title">FizzBuzz Challenge</h1>
+
+      <p class="description">
+        <strong class="challengeTitle">The Challenge</strong><br /><br />
+        For this challenge, I created a fizzbuzz() function that takes in a number, n, 
+        and returns an array of the numbers from 1 to n. For multiples of three, the array returns "Fizz" 
+        instead of the number, and for the multiples of five, "Buzz". For numbers that 
+        are multiples of both three and five, "FizzBuzz" will be returned. For 
+        example, fizzbuzz(16) should return [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 
+        'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz', 16]. <br />
+        <br /><br />
+        <strong class="challengeTitle"> My Solution</strong><br /><br />
+        My approach to this challenge was to loop through until each number up to "n" was 
+        added to the array checking along the way if that number was divisible by 3, 5, or 
+        both and replacing the number accordingly.
+        <br /><br />
+        Feel free to test it out below by entering a number for the array to run up to. The
+        function that I wrote is also pictured below.
+      </p>
+
+      <div class="inputInstruct">Plug in number:
+      <input
+        id="input"
+        type="number"
+        onsubmit="fizzbuzz(input1)"
+      /><button id="addNumber" onclick="fizzbuzz(input1)">
+        Add Number to List
+      </button>
+   
+      <button id="removeAllNumbers" onclick="removeAllNumbers()">
+        Reset
+      </button>
+
+      <h2 id="result"></h2>
+
+      <img class="code" src="codesnip.jpg" alt="picture of Rainwater code" />
+    </div>
+    <script src="fizzbuzz.js"></script>
+  </body>
+</html>
