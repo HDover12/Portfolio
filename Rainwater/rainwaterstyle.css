@@ -40,3 +40,15 @@ button {
   max-width: 1200px;
   margin: 0 auto;
 }
+.code {
+  max-width: 80%;
+}
+
+.code:hover,
+.code:active {
+  transform: scale(1.5);
+}
+
+.histo {
+  width: 70%;
+}
