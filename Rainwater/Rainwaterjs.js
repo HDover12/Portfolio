@@ -3,11 +3,13 @@ let afterNumber = [];
 let testArray = [];
 let canHold = 0;
 
-function capturingRainwater(heights) {
+function capturingRainwaterArray() {
   let input1 = document.getElementById("input").value;
   testArray.push(Number(input1));
-  console.log(heights);
-  let canHold = 0;
+  capturingRainwater(testArray);
+}
+function capturingRainwater(heights) {
+  canHold = 0;
   for (let i = 0; i < heights.length; i++) {
     beforeNumber = Math.max(...heights.slice(0, i));
     afterNumber = Math.max(...heights.slice(i + 1, heights.length));
@@ -25,13 +27,21 @@ function capturingRainwater(heights) {
   }
   document.getElementById(
     "result"
-  ).innerHTML = `Current number list (${testArray.join(
+  ).innerHTML = `Current number list [${testArray.join(
     ", "
-  )}) <br> Amount of water that can be held <br> ${canHold}`;
+  )}] <br> Amount of water that can be held <br> ${canHold}`;
   document.getElementById("input").value = null;
 }
+
 function removeLastNumber() {
   testArray.pop();
+  canHold = 0;
+  capturingRainwater(testArray);
+}
+
+function removeAllNumbers() {
+  testArray = [];
+  canHold = 0;
   document.getElementById(
     "result"
   ).innerHTML = `Current number list (${testArray.join(
@@ -39,11 +49,3 @@ function removeLastNumber() {
   )}) <br> Amount of water that can be held <br> ${canHold}`;
 }
 
-function removeAllNumbers() {
-  testArray = [];
-  document.getElementById(
-    "result"
-  ).innerHTML = `Current number list (${testArray.join(
-    ", "
-  )}) <br> Amount of water that can be held <br> ${canHold}`;
-}
