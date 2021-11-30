@@ -20,19 +20,22 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap"
       rel="stylesheet"
     />
+     <title>Rainwater</title>
   </head>
   <body>
     <div class="wrapper">
+      <a class="home" href="../index.html">Home</a>
       <h1 class="title">Rainwater Challenge</h1>
 
       <p class="description">
-        <strong class="challengeTitle"> The Challenge</strong><br /><br />
+        <strong class="challengeTitle">The Challenge</strong><br /><br />
         For this challenge, I created a capturingRainwater() function that takes
         in an array of heights, and returns the amount of rainwater that could
         be contained in that array. For example, the array [4, 2, 1, 3, 0, 1, 2]
         would give the folowing histogram:
         <br />
         <br /><img
+          class="histo"
           src="https://static-assets.codecademy.com/curriculum/code-challenges/Image%202.svg"
           alt=""
         /><br />
@@ -46,30 +49,30 @@
         would only collect up to the second highest of those two maximum
         numbers. I could then subtract the second highest number from the height
         of the current number and that would give me how much water that spot
-        could hold. All that would be left would be to add up each spot.
+        could hold. Finally, I added up each spot.
         <br /><br />
         Feel free to test it out below by entering numbers for the array. The
         function that I wrote is also pictured below.
       </p>
 
-      <div class="inputInstruct">Plug in heights:</div>
-      <div>
-        <input id="input" type="number" /><button
-          id="addNumber"
-          onclick="capturingRainwater(testArray)"
-        >
-          Add Number to List
-        </button>
-        <button id="removeLastNumber" onclick="removeLastNumber()">
-          Remove Last Number
-        </button>
-        <button id="removeAllNumbers" onclick="removeAllNumbers()">
-          Remove All Numbers
-        </button>
-      </div>
+      <div class="inputInstruct">Plug in heights:
+      <input
+        id="input"
+        type="number"
+        onchange="capturingRainwaterArray()"
+      /><button id="addNumber" onclick="capturingRainwaterArray()">
+        Add Number to List
+      </button>
+      <button id="removeLastNumber" onclick="removeLastNumber()">
+        Remove Last Number
+      </button>
+      <button id="removeAllNumbers" onclick="removeAllNumbers()">
+        Remove All Numbers
+      </button>
+
       <h2 id="result"></h2>
 
-      <img src="codesnip.jpg" alt="picture of Rainwater code" />
+      <img class="code" src="codesnip.jpg" alt="picture of Rainwater code" />
     </div>
     <script src="Rainwaterjs.js"></script>
   </body>
