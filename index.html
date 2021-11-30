@@ -17,11 +17,11 @@
       href="smallscreen.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat:wght@600&family=Dosis&family=Nothing+You+Could+Do&family=Slabo+27px&display=swap"
       rel="stylesheet"
     />
 
-    <title>Document</title>
+    <title>Hannah Dover</title>
   </head>
   <body>
     <div class="welcome">
@@ -36,40 +36,83 @@
       </div>
       <div class="arrowBox">
         <div class="arrowRotate">
-          <a class="arrow" href="#projects">&#8250;</a>
+          <a class="arrow" href="#bodyStart"> &#8250;</a>
         </div>
       </div>
     </div>
+    <div class="contactWrapper">
+      <div class="wrapper">
+        <hr />
+        <section id="bodyStart">
+          <h2 class="projectTitle">About Me</h2>
+          <p class="aboutMe">
+            Hi there. I'm Hannah. A chemist👩‍🔬 turned self-taught coder👩‍💻. After
+            working in a lab for 10 years, I discovered a new love. One that
+            allows me to be creative through logic and to organize and transform
+            data into useful information. Below are a few challenges I have
+            completed to demonstrate the skills I have acquired and put to use.
+            As a full time chemist learning coding on the side, I don't yet have
+            too many real world projects, but I hope you enjoying testing out
+            the different functions I've written and problems I've solved with
+            my new found HTML, CSS and JavaScript skills.
+          </p>
+        </section>
+        <hr />
+        <section>
+          <h2 class="projectTitle">Challenges</h2>
 
-    <hr />
-    <section>
-      <a name="projects"></a>
-      <h2 class="projectTitle">Challenges</h2>
-      <div class="intro">
-        <ul class="projects">
-          <li class="cards">
-            <a href="Rainwater/Rainwater.html"> Rainwater Collection </a>
-          </li>
-          <li class="cards">
-            <a href="Rainwater/Rainwater.html">
-              Fibonacci Finder (Under Construction)</a
-            >
-          </li>
-          <li class="cards">
-            <a href="Rainwater/Rainwater.html">
-              Score Sorter (Under Construction)</a
-            >
-          </li>
-          <li class="cards">
-            <a href="Rainwater/Rainwater.html">
-              FizzBuzz (Under Construction)</a
-            >
-          </li>
-        </ul>
+          <ul class="ulProjects">
+            <li class="cards">
+              <a href="Rainwater/Rainwater.html">
+                <button class="projectBtn">Rainwater Collection</button></a
+              >
+            </li>
+            <li class="cards">
+              <a href="FizzBuzz/FizzBuzz.html">
+                <button class="projectBtn">FizzBuzz</button></a
+              >
+            </li>
+            <li class="cards">
+              <a href="Rainwater/Rainwater.html">
+                <button class="projectBtn">Score Sorter</button></a
+              >
+            </li>
+            <li class="cards">
+              <a href="Rainwater/Rainwater.html">
+                <button class="projectBtn">Fibonacci Finder</button></a
+              >
+            </li>
+            <li class="cards">
+              <a href="Rainwater/Rainwater.html">
+                <button class="projectBtn">FizzBuzz</button></a
+              >
+            </li>
+          </ul>
+        </section>
       </div>
-      <div id="footer">
+
+      <button class="contactBtn" id="contactBtn" onclick="slideOut()">
+        <div class="contactdiv">Contact Me</div>
+
+        <span class="contact" id="contact">
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" />
+            <label for="email">Email:</label>
+            <input type="email" id="email" />
+            <label for="questions">Questions for me?</label>
+            <input type="text" id="questions" />
+            <input type="submit" />
+          </form>
+          <button id="closeBtn" onclick="slideIn()">X</button>
+        </span>
+      </button>
+      <div id="returnTop">
         <span class="topStyle"><a class="top" href="#top">&#187;</a></span>
       </div>
-    </section>
+    </div>
+    <footer class="footer">coded by Hannah Dover</footer>
+    <script src="main.js"></script>
   </body>
 </html>
+
