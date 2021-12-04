@@ -1,6 +1,10 @@
 body {
   background-color: black;
 }
+.home {
+  color: aliceblue;
+}
+
 .title {
   color: aliceblue;
   text-align: center;
@@ -19,6 +23,8 @@ body {
 
 .inputInstruct {
   color: aliceblue;
+  margin: 60px auto;
+  width: 80%;
 }
 
 button {
@@ -29,16 +35,17 @@ button {
 #addNumber,
 #removeAllNumbers,
 #removeLastNumber {
-  background-color: rgb(105, 146, 168);
+  background-color: #176bbed8;
   color: aliceblue;
   padding: 5px;
   border-radius: 4px;
   border: black solid 2px;
+  display: inline-block;
 }
 
 .wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 40px auto;
 }
 .code {
   max-width: 80%;
@@ -51,4 +58,101 @@ button {
 
 .histo {
   width: 70%;
+}
+
+#chart {
+  border-left: solid 5px white;
+  border-bottom: solid 5px white;
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+#barChart {
+  height: 300px;
+  position: relative;
+}
+
+#wrapwrap {
+  height: 310px;
+  position: relative;
+  margin-left: 10%;
+}
+#tablewrap {
+  position: absolute;
+  width: 0;
+  height: 4vw;
+  bottom: 9px;
+  overflow: hidden;
+}
+
+#fish {
+  position: absolute;
+  background-image: url(fishfish.gif);
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  background-size: 100%;
+
+  top: 10px;
+  z-index: -2;
+  animation: fish linear infinite;
+  animation-duration: 10s;
+}
+.fishStyle {
+  width: 51px;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  height: 200px;
+  background-color: black;
+  z-index: -1;
+  padding: 0;
+}
+
+.innerNumber {
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  text-align: center;
+  color: white;
+
+  z-index: 2;
+}
+
+.barStyle {
+  background: #176abe;
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  border: solid 1px black;
+  border-bottom: 0;
+  font-size: 14px;
+  padding: 0;
+  z-index: 2;
+}
+
+.rainStyle {
+  width: 51px;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background-image: url(bubbles.gif);
+  background-color: rgba(32, 137, 241, 0.315);
+  background-position: -5px 0;
+  background-size: cover;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  padding: 0;
+  font-weight: bolder;
+}
+
+@keyframes fish {
+  0% {
+    left: 20px;
+  }
+  100% {
+    left: 100%;
+  }
 }
