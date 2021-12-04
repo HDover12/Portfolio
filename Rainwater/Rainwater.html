@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap"
       rel="stylesheet"
     />
-     <title>Rainwater</title>
+    <title>Rainwater</title>
   </head>
   <body>
     <div class="wrapper">
@@ -49,31 +49,45 @@
         would only collect up to the second highest of those two maximum
         numbers. I could then subtract the second highest number from the height
         of the current number and that would give me how much water that spot
-        could hold. Finally, I added up each spot.
+        could hold. Finally, I added up all of the spots. I took it a step(or
+        20) further and created a dynamically updating chart for the array as
+        well.
         <br /><br />
-        Feel free to test it out below by entering numbers for the array. The
-        function that I wrote is also pictured below.
+        Feel free to test it out below by entering numbers for the array.
       </p>
 
-      <div class="inputInstruct">Plug in heights:
-      <input
-        id="input"
-        type="number"
-        onchange="capturingRainwaterArray()"
-      /><button id="addNumber" onclick="capturingRainwaterArray()">
-        Add Number to List
-      </button>
-      <button id="removeLastNumber" onclick="removeLastNumber()">
-        Remove Last Number
-      </button>
-      <button id="removeAllNumbers" onclick="removeAllNumbers()">
-        Remove All Numbers
-      </button>
+      <div class="inputInstruct">
+        Enter a number between 0 and 50:
+        <input
+          id="input"
+          type="text"
+          onchange="capturingRainwaterArray()"
+          placeholder=""
+        /> <br>
+        <button id="addNumber" onclick="capturingRainwaterArray()">
+          Add Number to List
+        </button>
+        <button id="removeLastNumber" onclick="removeLastNumber()">
+          Remove Last Number
+        </button>
+        <button id="removeAllNumbers" onclick="removeAllNumbers()">
+          Remove All Numbers
+        </button>
 
-      <h2 id="result"></h2>
+        <h2 id="result">No numbers in current array<br><br><br></h2>
+      </div>
+      <div id='wrapwrap'>
+      <div id='tablewrap'>
+      <div id="fish"></div>
+          </div>
+      <table id="chart">
+        
+        <tr id="barChart"></tr>
+      </table>
 
-      <img class="code" src="codesnip.jpg" alt="picture of Rainwater code" />
-    </div>
+      </div>
+
     <script src="Rainwaterjs.js"></script>
   </body>
 </html>
+
