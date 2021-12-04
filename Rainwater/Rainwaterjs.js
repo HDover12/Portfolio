@@ -14,17 +14,19 @@ let tablewrap = document.getElementById("tablewrap");
 let fish = document.getElementById("fish");
 let fishArray = [];
 
+// function prevent(event) {
+//   event.preventDefault();
+// }
+
 // Create an array of the numbers the user inputs
-function capturingRainwaterArray() {
-  let input1 = document.getElementById("input").value;
-  if (isNaN(input1) || input1 < 0 || input1 >= 50) {
-    alert("Please enter a number between 0 and 50");
-  } else if (input1) {
-    testArray.push(Number(input1));
-    heightMultiplier = chartMaxHeight / Math.max(...testArray);
-    capturingRainwater(testArray);
-  }
+function capturingRainwaterArray(event) {
+  event.preventDefault();
+  let input1 = Math.round(document.getElementById("input").value);
+  testArray.push(Number(input1));
+  heightMultiplier = chartMaxHeight / Math.max(...testArray);
+  capturingRainwater(testArray);
 }
+
 function capturingRainwater(heights) {
   canHold = 0;
   let rainArray = [];
