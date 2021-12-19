@@ -23,17 +23,20 @@ body {
 
 .inputInstruct {
   color: aliceblue;
-  margin: 60px auto;
+  max-width: 600px;
+  margin: 40px auto;
   width: 80%;
+  border: aliceblue 7px ridge;
+  padding: 20px;
 }
 form {
   display: inline;
 }
+/* chart buttons */
 button {
   display: block;
   background-color: aliceblue;
 }
-
 #addNumber,
 #removeAllNumbers,
 #removeLastNumber {
@@ -50,19 +53,17 @@ button {
   max-width: 1000px;
   margin: 40px auto;
 }
-.code {
-  max-width: 80%;
-}
-
-.code:hover,
-.code:active {
-  transform: scale(1.5);
-}
 
 .histo {
   width: 70%;
 }
 
+.title2 {
+  color: aliceblue;
+  margin-bottom: 0;
+}
+
+/* Dynamic Chart */
 #chart {
   border-left: solid 5px white;
   border-bottom: solid 5px white;
@@ -70,16 +71,9 @@ button {
   margin: 0;
   position: relative;
 }
-
 #barChart {
   height: 300px;
   position: relative;
-}
-
-#wrapwrap {
-  height: 310px;
-  position: relative;
-  margin-left: 10%;
 }
 #tablewrap {
   position: absolute;
@@ -89,7 +83,16 @@ button {
   overflow: hidden;
 }
 
-#fish {
+/* Animation wrapper */
+#wrapwrap {
+  height: 310px;
+  position: relative;
+  margin-left: 10%;
+}
+/* Animation Styling for all */
+#fish,
+#mermaid,
+#shark {
   position: absolute;
   background-image: url(fishfish.gif);
   background-repeat: no-repeat;
@@ -97,11 +100,23 @@ button {
   height: 60px;
   background-size: 100%;
 
-  top: 10px;
+  top: 20px;
   z-index: -2;
   animation: fish linear infinite;
   animation-duration: 10s;
 }
+#mermaid {
+  background-image: url(mermaid.gif);
+  width: 125px;
+  height: 125x;
+}
+#shark {
+  background-image: url(shark.gif);
+  width: 125px;
+  height: 125x;
+}
+
+/* Black bars for hiding animation where there is no water */
 .fishStyle {
   width: 51px;
   position: absolute;
@@ -123,6 +138,7 @@ button {
   z-index: 2;
 }
 
+/* Solid bars */
 .barStyle {
   background: #176abe;
   width: 50px;
@@ -135,6 +151,7 @@ button {
   z-index: 2;
 }
 
+/* Water bars */
 .rainStyle {
   width: 51px;
   position: absolute;

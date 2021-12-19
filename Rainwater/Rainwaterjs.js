@@ -14,10 +14,6 @@ let tablewrap = document.getElementById("tablewrap");
 let fish = document.getElementById("fish");
 let fishArray = [];
 
-// function prevent(event) {
-//   event.preventDefault();
-// }
-
 // Create an array of the numbers the user inputs
 function capturingRainwaterArray(event) {
   event.preventDefault();
@@ -118,6 +114,8 @@ function capturingRainwater(heights) {
     rainSelect.style.left = i * leftAlignMultiplier + 0.5 + i + "px";
     rainSelect.style.bottom = heights[i] * heightMultiplier + 1 + "px";
   }
+
+  // Create black bars for the animation to hide behind when there's no water
   fish.style.opacity = "100%";
   for (let i = 0; i < testArray.length; i++) {
     fishArray.push(i);
@@ -190,4 +188,16 @@ function removeAllNumbers() {
   )}) <br> Amount of water that can be held <br> ${canHold}`;
 
   fish.style.opacity = "0%";
+}
+
+// Change which animation swims
+function changePic() {
+  let selection = document.getElementById("changePic").value;
+  if (selection == "mermaid") {
+    fish.setAttribute("id", "mermaid");
+  } else if (selection == "fish") {
+    fish.setAttribute("id", "fish");
+  } else if (selection == "shark") {
+    fish.setAttribute("id", "shark");
+  }
 }

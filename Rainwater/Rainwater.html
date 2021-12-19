@@ -40,9 +40,9 @@ input[type=number] {
 
       <p class="description">
         <strong class="challengeTitle">The Challenge</strong><br /><br />
-        For this challenge, I created a capturingRainwater() function that takes
+        For this challenge from CodeAcademy.com, I created a capturingRainwater() function that takes
         in an array of heights, and returns the amount of rainwater that could
-        be contained in that array. For example, the array [4, 2, 1, 3, 0, 1, 2]
+        be contained within the bars. For example, the array [4, 2, 1, 3, 0, 1, 2]
         would give the folowing histogram:
         <br />
         <br /><img
@@ -71,12 +71,11 @@ input[type=number] {
         Enter a number between 0 and 50:
       <form onsubmit="capturingRainwaterArray(event)">
         <input
-          id="input"
+        id="input"
          type="number" 
-                placeholder="" min="0" max="50"   
-        /></form>
+         min="0" max="50" placeholder="0"/></form>
         <br>
-        <button id="addNumber" onclick="capturingRainwaterArray()">
+        <button id="addNumber" onclick="capturingRainwaterArray(event)">
           Add Number to List
         </button>
         <button id="removeLastNumber" onclick="removeLastNumber()">
@@ -87,7 +86,16 @@ input[type=number] {
         </button>
 
         <h2 id="result">No numbers in current array<br><br><br></h2>
+        </div>   
+       <div class="selector">
+        <p class="title2">Change <br> animations</p>
+        <select id="changePic" onchange="changePic()">
+           <option value="fish">Fish</option>
+            <option value="mermaid">Mermaid</option>
+            <option value="shark">Whale</option>
+          </select>
       </div>
+  
       <div id='wrapwrap'>
       <div id='tablewrap'>
       <div id="fish"></div>
