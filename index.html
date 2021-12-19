@@ -17,13 +17,26 @@
       href="smallscreen.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat:wght@600&family=Dosis&family=Nothing+You+Could+Do&family=Slabo+27px&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat:wght@600&family=Dosis&family=Jura&family=Merriweather:ital,wght@1,300&family=Nothing+You+Could+Do&family=Slabo+27px&family=Titillium+Web:wght@300&display=swap"
       rel="stylesheet"
     />
 
     <title>Hannah Dover</title>
   </head>
   <body>
+    <div id="navBar">
+      <ul id="navListUl">
+        <li class="navItems" id="navAboutMe">
+          <a class="navLinks" href="#divide1">About Me</a>
+        </li>
+        <li class="navItems" id="navProjects">
+          <a class="navLinks" href="#divide2">Challenges</a>
+        </li>
+        <li class="navItems" id="navContact">
+          <a class="navLinks" href="contact/contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
     <div class="welcome">
       <div class="headerContent">
         <h1 class="hello">Hello, I'm</h1>
@@ -35,14 +48,12 @@
         </div>
       </div>
       <div class="arrowBox">
-        <div class="arrowRotate">
-          <a class="arrow" href="#bodyStart"> &#8250;</a>
-        </div>
+        <a href="#divide1"><button class="arrow">&#8250;</button> </a>
       </div>
     </div>
     <div class="contactWrapper">
       <div class="wrapper">
-        <hr />
+        <hr id="divide1" />
         <section id="bodyStart">
           <h2 class="projectTitle">About Me</h2>
           <p class="aboutMe">
@@ -51,16 +62,17 @@
             allows me to be creative through logic and to organize and transform
             data into useful information. Below are a few challenges I have
             completed to demonstrate the skills I have acquired and put to use.
+          </p>
+        </section>
+        <hr id="divide2" />
+        <section>
+          <h2 class="projectTitle">Challenges</h2>
+          <p class="aboutMe">
             As a full time chemist learning coding on the side, I don't yet have
             too many real world projects, but I hope you enjoying testing out
             the different functions I've written and problems I've solved with
             my new found HTML, CSS and JavaScript skills.
           </p>
-        </section>
-        <hr />
-        <section>
-          <h2 class="projectTitle">Challenges</h2>
-
           <ul class="ulProjects">
             <li class="cards">
               <a href="Rainwater/Rainwater.html">
@@ -68,51 +80,75 @@
               >
             </li>
             <li class="cards">
+              <a href="piechart/piechart.html">
+                <button class="projectBtn">Pie Chart</button></a
+              >
+            </li>
+            <li class="cards">
+              <a href="ToDo list/todo.html">
+                <button class="projectBtn">To Do List</button></a
+              >
+            </li>
+            <li class="cards">
               <a href="FizzBuzz/FizzBuzz.html">
-                <button class="projectBtn">FizzBuzz</button></a
-              >
-            </li>
-            <li class="cards">
-              <a href="Rainwater/Rainwater.html">
-                <button class="projectBtn">Score Sorter</button></a
-              >
-            </li>
-            <li class="cards">
-              <a href="Rainwater/Rainwater.html">
-                <button class="projectBtn">Fibonacci Finder</button></a
-              >
-            </li>
-            <li class="cards">
-              <a href="Rainwater/Rainwater.html">
                 <button class="projectBtn">FizzBuzz</button></a
               >
             </li>
           </ul>
         </section>
       </div>
-
-      <button class="contactBtn" id="contactBtn" onclick="slideOut()">
-        <div class="contactdiv">Contact Me</div>
-
-        <span class="contact" id="contact">
-          <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" />
-            <label for="email">Email:</label>
-            <input type="email" id="email" />
-            <label for="questions">Questions for me?</label>
-            <input type="text" id="questions" />
-            <input type="submit" />
-          </form>
-          <button id="closeBtn" onclick="slideIn()">X</button>
-        </span>
+      <button id="contactBtn" onclick="slideOut()">
+        <div id="contactdiv">Contact Me</div>
       </button>
+      <span id="contact">
+        <form
+          action="mailto:hannahcodes12@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name">Name:</label>
+          <input type="text" name="Name" id="name" />
+          <label for="email">Email:</label>
+          <input type="email" name="Email" id="email" />
+          <label for="comments" rows="7">Questions or Comments:</label>
+          <textarea
+            name="Comments"
+            id="comments"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <br />
+          <br />
+          <input id="submit" type="submit" value="Send" />
+          <br /><br />
+        </form>
+        <button id="closeBtn" onclick="slideIn()">X</button>
+      </span>
       <div id="returnTop">
         <span class="topStyle"><a class="top" href="#top">&#187;</a></span>
       </div>
     </div>
-    <footer class="footer">coded by Hannah Dover</footer>
+    <footer class="footer">
+      coded by Hannah Dover
+      <a href="https://github.com/HDover12" target="_blank">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#fad7c7"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="Github"
+        >
+          <title>GitHub</title>
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+          ></path>
+        </svg>
+      </a>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
-
