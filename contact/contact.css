@@ -1,0 +1,53 @@
+body {
+  width: 60%;
+  margin: 0 auto;
+  background-image: url(../star.gif);
+}
+#home {
+  color: aliceblue;
+  position: fixed;
+  top: 10px;
+  left: 20%;
+}
+
+a:visited {
+  color: aliceblue;
+}
+
+a:hover {
+  text-decoration: aliceblue underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrapper {
+  width: 70%;
+  min-width: 313px;
+  height: 460px;
+  margin: 10vh auto;
+  border: aliceblue solid 2px;
+  background-color: black;
+}
+
+#title {
+  color: black;
+  width: 100%;
+  text-align: center;
+  background-color: lightblue;
+  margin: 0;
+}
+
+#contact {
+  color: aliceblue;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+#comments,
+#name,
+#email {
+  margin-top: 7px;
+  width: 216px;
+}
