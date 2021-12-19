@@ -1,16 +1,17 @@
 function slideOut() {
-  let panel = document.getElementById("contact");
-  panel.classList.remove("contact");
-  panel.classList.add("contactOut");
   let buttonHide = document.getElementById("contactBtn");
-  buttonHide.classList.remove("contactBtn");
-  buttonHide.classList.add("contactBtnHide");
+  buttonHide.setAttribute("id", "contactBtnHide");
+  let panel = document.getElementById("contact");
+  panel.setAttribute("id", "contactOut");
 }
 function slideIn() {
-  let panel = document.getElementById("contact");
-  panel.classList.remove("contactOut");
-  panel.classList.add("contact");
-  let buttonHide = document.getElementById("contactBtn");
-  buttonHide.classList.remove("contactBtnHide");
-  buttonHide.classList.add("contactBtn");
+  let panel = document.getElementById("contactOut");
+  panel.setAttribute("id", "contact");
+  let button = document.getElementById("contactBtnHide");
+  button.setAttribute("id", "contactBtn");
 }
+
+let navBar = document.getElementById("navBar");
+document.addEventListener("scroll", () => {
+  navBar.style.opacity = "80%";
+});
