@@ -1,0 +1,121 @@
+body {
+  background-color: black;
+}
+
+.home,
+.home:visited {
+  color: aliceblue;
+}
+
+.home:hover {
+  text-decoration: aliceblue underline;
+  cursor: pointer;
+}
+
+#wrapper {
+  width: 753px;
+  height: fit-content;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+#listContain {
+  position: absolute;
+  top: 75px;
+  left: 105px;
+  width: 380px;
+  height: 300px;
+}
+
+.divItems {
+  width: 541px;
+  overflow-wrap: break-word;
+  margin-left: 100px;
+}
+
+#title {
+  font-family: "Shadows Into Light", cursive;
+  margin-bottom: 2px;
+  margin-top: 28px;
+}
+
+#list {
+  font-family: "Shadows Into Light", cursive;
+  padding: 0;
+  margin: 0;
+}
+
+#text {
+  border: none;
+  font-family: "Shadows Into Light", cursive;
+  border-bottom: solid 2px black;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#text:focus {
+  border: none;
+  font-family: "Shadows Into Light", cursive;
+  border-bottom: solid 2px black;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#remove {
+  position: absolute;
+  left: 120px;
+  bottom: 57px;
+  border: none;
+  border-bottom: solid black 2px;
+  font-family: "Shadows Into Light", cursive;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.listItem {
+  background-image: url(papermiddle.jpg);
+  width: 758px;
+  height: 35px;
+  background-size: cover;
+  text-align: center;
+}
+
+#todoHeader {
+  background-image: url(papertop.jpg);
+  width: 757px;
+  height: 144px;
+  background-size: cover;
+  align-self: flex-start;
+  text-align: center;
+}
+
+#actualList {
+  background-image: url(papermiddle.jpg);
+  width: 758px;
+  min-height: 35px;
+  height: max-content;
+  background-size: cover;
+}
+
+#removeBtn {
+  background-image: url(paperbottom.jpg);
+  width: 756px;
+  height: 200px;
+  background-size: cover;
+  align-self: baseline;
+  position: relative;
+}
+
+#remove:hover {
+  cursor: pointer;
+}
+
+.listButtons {
+  border: none;
+  width: 16px;
+  height: 13px;
+  background-image: url(delete.jpg);
+  background-size: contain;
+}
+.listButtons:hover {
+  cursor: pointer;
+}
