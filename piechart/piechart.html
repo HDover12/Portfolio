@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="piechart.css" />
+    <title>Pie Chart</title>
+  </head>
+  <body>
+    <a id="home" href="../index.html">Home</a>
+    <div id="pie">
+      <select name="Choose a unit" id="units" onchange="changeColor()">
+        <option value="lb/MMBtu">lb/MMBtu</option>
+        <option value="lb/hr">lb/hr</option>
+        <option value="ppm">ppm</option>
+        <option value="ppb">ppb</option>
+      </select>
+      <div id="redLabel"></div>
+      <div id="orangeLabel"></div>
+      <div id="yellowLabel"></div>
+      <div id="greenLabel"></div>
+      <div id="blueLabel"></div>
+      <div id="purpleLabel"></div>
+      <div id="inputs">
+        <label for="red">Red</label>
+        <input
+          type="number"
+          id="red"
+          value="0"
+          onchange="changeColor()"
+          min="0"
+        />
+        <label for="orange">Orange</label>
+        <input
+          type="number"
+          id="orange"
+          value="0"
+          onchange="changeColor()"
+          min="0"
+        />
+        <label for="yellow">Yellow</label>
+        <input
+          type="number"
+          id="yellow"
+          value="0"
+          onchange="changeColor()"
+          min="0"
+        />
+        <label for="green">Green</label>
+        <input
+          type="number"
+          id="green"
+          value="0"
+          onchange="changeColor()"
+          min="0"
+        />
+        <label for="blue">Blue</label>
+        <input
+          type="number"
+          id="blue"
+          value="0"
+          onchange="changeColor()"
+          min="0"
+        />
+        <label for="purple">Purple</label>
+        <input
+          type="number"
+          id="purple"
+          value="0"
+          onchange="changeColor()"
+          min="0"
+        />
+      </div>
+    </div>
+
+    <script src="piechart.js"></script>
+  </body>
+</html>
