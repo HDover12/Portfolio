@@ -1,3 +1,7 @@
+:root {
+  --mainTextColor: #fad7c7;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,6 +13,8 @@ body {
 .welcome {
   width: 100%;
   height: 100vh;
+  background-image: url(star.gif);
+  position: relative;
 }
 
 .headerContent {
@@ -26,7 +32,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   animation: typing 2s steps(12, end);
-  color: aliceblue;
+  color: var(--mainTextColor);
   text-shadow: 4px 4px rgba(211, 211, 211, 0.062);
   font-weight: lighter;
 }
@@ -36,7 +42,7 @@ body {
   height: 129px;
   animation: fade-in 6s forwards linear;
   animation-delay: 1.2s;
-  font-family: "Slabo 27px", serif;
+  font-family: "Jura", sans-serif;
   opacity: 0%;
   margin: 0 auto;
   width: 80%;
@@ -44,33 +50,76 @@ body {
   position: static;
   text-align: center;
 }
+
+/* Nav Bar */
+#navBar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: rgb(34, 17, 40);
+  height: 30px;
+  opacity: 0%;
+  transition: 2s;
+  z-index: 1;
+}
+
+#navListUl {
+  list-style: none;
+  padding: 0%;
+  margin: 0% 15%;
+  text-align: right;
+  color: var(--mainTextColor);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  font-size: 20px;
+}
+
+.navItems {
+  display: inline-block;
+}
+
+.navLinks {
+  text-decoration: none;
+  color: var(--mainTextColor);
+}
+.navLinks:visited {
+  color: var(--mainTextColor);
+}
+
 /* Bouncing Arrow */
 .arrowBox {
   animation: bounce 0.5s alternate forwards steps(20, end);
-  animation-delay: 3s;
+  animation-delay: 6s;
   animation-iteration-count: 4;
-  z-index: 1;
   width: 100%;
+  height: 50px;
   opacity: 0;
-  text-align: center;
   position: absolute;
-  bottom: 10px;
+  bottom: 10vh;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.arrowRotate {
-  height: fit-content;
-  transform: rotate(90deg);
-}
 .arrow {
-  color: aliceblue;
+  color: var(--mainTextColor);
   font-size: 90px;
   text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  transform: rotate(90deg) translateY(-20%);
+  width: 40px;
+  height: 85px;
+}
+
+.arrow:hover {
+  cursor: pointer;
 }
 
 .arrow:visited {
-  color: aliceblue;
+  color: var(--mainTextColor);
 }
 
 /* wrapper div section */
@@ -85,14 +134,15 @@ hr {
 /* Intro Section */
 
 .projectTitle {
-  color: aliceblue;
+  color: var(--mainTextColor);
   text-align: center;
   font-size: 3em;
-  font-family: "Slabo 27px", serif;
+  font-family: "Jura", sans-serif;
+  font-weight: lighter;
 }
 
 .aboutMe {
-  color: aliceblue;
+  color: var(--mainTextColor);
   text-align: center;
   width: 70vw;
   margin: 0 auto 80px auto;
@@ -118,19 +168,24 @@ hr {
   text-align: center;
   font-size: 2em;
   border-radius: 10px;
+  border: black 2px solid;
 }
 
 .cards:hover {
-  box-shadow: 0 0 15px 1px aliceblue;
+  box-shadow: 0 0 15px 1px var(--mainTextColor);
   transform: scale(1.05);
-  background-color: #8acbf1e3;
+  background-color: rgb(159, 199, 248);
 }
 
 .projectBtn {
-  color: aliceblue;
+  color: var(--mainTextColor);
   width: 100%;
   height: 100%;
-  background-color: #8acbf1af;
+  background: linear-gradient(
+    -163deg,
+    rgb(21, 1, 27) -159.9% -20%,
+    rgb(42, 26, 48) 119.9% 100%
+  );
   font-family: "Slabo 27px", serif;
   font-size: 1em;
   cursor: pointer;
@@ -140,24 +195,56 @@ hr {
 #returnTop {
   position: sticky;
   bottom: 10px;
-  right: 50px;
   text-align: right;
   width: 100%;
 }
 
 .top:visited {
-  color: aliceblue;
+  color: var(--mainTextColor);
 }
 
 .topStyle {
-  margin-right: -15px;
+  margin-right: 5%;
   font-size: 3em;
-  color: aliceblue;
+  color: var(--mainTextColor);
   display: inline-block;
   transform: rotate(-90deg);
 }
 .top {
   text-decoration: none;
+}
+
+/* slide out contact panel */
+.contactWrapper {
+  background: linear-gradient(black 0% 20%, rgb(21, 1, 27) 119.9%);
+}
+
+#contactdiv {
+  display: none;
+}
+
+#contactBtn {
+  display: none;
+}
+
+#contactBtnHide {
+  display: none;
+}
+
+#closeBtn {
+  display: none;
+}
+
+#contact {
+  display: none;
+}
+#contactOut {
+  display: none;
+}
+
+#comments {
+  width: 170px;
+  height: 80px;
 }
 
 @keyframes typing {
@@ -199,13 +286,13 @@ hr {
   transform: rotateY(360deg);
 }
 .firstH {
-  color: #61d4b3e7;
+  color: #626f92;
 }
 .firstA {
-  color: #fb8d62e5;
+  color: #e4a487;
 }
 .firstN {
-  color: #8accf1da;
+  color: #474168;
 }
 .secondN {
   color: #fdd265e7;
@@ -214,14 +301,16 @@ hr {
   color: #6173f4;
 }
 .secondH {
-  color: #fd2eb5e1;
+  color: #917cc4;
   right: initial;
 }
 
 .footer {
-  color: aliceblue;
-  margin-left: 2%;
+  color: var(--mainTextColor);
+  padding-bottom: 2px;
   font-family: "Nothing You Could Do", cursive;
+  text-align: center;
+  background: rgb(17, 0, 22);
 }
 
 @keyframes fade-in {
@@ -247,4 +336,3 @@ hr {
     opacity: 100%;
   }
 }
-
