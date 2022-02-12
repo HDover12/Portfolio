@@ -10,12 +10,17 @@ body {
   margin: 0;
   background: black;
 }
+
+small {
+  font-size: 18px;
+}
 .welcome {
   width: 100%;
   height: 100vh;
   background-image: url(star.gif);
   position: relative;
 }
+
 
 .headerContent {
   width: 100%;
