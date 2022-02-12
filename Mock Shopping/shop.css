@@ -4,7 +4,7 @@ body {
 
 #header {
   width: 100vw;
-  height: 25vw;
+  height: 80vw;
   background-image: url(pics/header.jpg);
   margin-bottom: 40px;
   background-size: cover;
@@ -12,6 +12,7 @@ body {
   background-position-y: 40%;
   position: relative;
 }
+
 #headerText {
   position: absolute;
   width: fit-content;
@@ -19,8 +20,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 5em;
-
+  font-size: 10vw;
   font-family: "Poiret One", cursive;
   color: white;
   text-shadow: -1px -1px 0 #000, 3px 3px 0 #000, 2px 3px 0 #000, 4px 4px 0 #000;
@@ -111,22 +111,44 @@ body {
   text-decoration: underline;
 }
 
+#productArea {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  order: 3;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  align-content: space-around;
+}
+
 #navBar {
-  width: 15%;
+  min-width: 100%;
+  order: 1;
 }
 
 #navlist {
   padding: 0;
   list-style: none;
-  display: inline-block;
-  height: 100vh;
-  width: 15vw;
+  width: 100%;
+  height: fit-content;
   margin: 0;
 }
 
 .navItem {
   padding: 5px;
+  padding-left: 0;
+  display: inline-block;
   border: 1px solid white;
+  width: fit-content;
+  margin: 0;
 }
 .navItem:hover {
   text-decoration: underline;
@@ -135,36 +157,26 @@ body {
   font-weight: bold;
 }
 
-#productArea {
-  display: flex;
-  width: 75%;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-content: flex-start;
-}
-
-#wrapper {
-  display: flex;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 5%;
-  margin-right: 5%;
-  align-content: space-around;
-}
-
 #showAll {
-  margin-bottom: 4px;
-  margin-top: 0;
+  margin: 0;
 }
 
 #sort {
-  width: 15%;
+  width: 100%;
+  order: 2;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
+#sortHead {
+  margin: 0;
+}
+
 #sortHigh,
 #sortLow {
-  margin-top: 4px;
+  margin-top: 6px;
   width: 100px;
-  font-size: 0.8em;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: inline-block;
 }
 
 #sortHigh:hover,
