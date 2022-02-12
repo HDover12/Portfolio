@@ -92,6 +92,24 @@ let product10 = new Item(
   10,
   "Red jacket"
 );
+let product11 = new Item(
+  "pics/Product11.jpg",
+  "white",
+  "Tops",
+  20,
+  11,
+  "White and Rainbow Top"
+);
+
+let product12 = new Item(
+  "pics/Product12.jpg",
+  "black",
+  "Tops",
+  23,
+  12,
+  "Black paisley blouse"
+);
+
 let productArray = [
   product1,
   product2,
@@ -103,6 +121,8 @@ let productArray = [
   product8,
   product9,
   product10,
+  product11,
+  product12,
 ];
 
 let body = document.querySelector("body");
@@ -144,6 +164,7 @@ navlist.addEventListener("click", (e) => {
       let target = e.target.textContent;
       if (productArray[i].category === target) {
         displayArray.push(productArray[i]);
+        console.log(displayArray);
       }
     }
     buildCards();
@@ -157,7 +178,7 @@ function buildCards() {
     productArea.prepend(productCard);
     let tooltip = "Product" + displayArray[i].productId;
     productCard.innerHTML = `<div title = '${tooltip}' class = 'productPic' style = "background-image: url('${product}');"></div>
-      <div class ='description'><div>${productArray[i].description}</div><div>Price: $${productArray[i].price}</div></div>`;
+      <div class ='description'><div>${displayArray[i].description}</div><div>Price: $${displayArray[i].price}</div></div>`;
   }
 }
 

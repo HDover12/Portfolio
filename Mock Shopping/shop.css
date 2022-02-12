@@ -38,6 +38,7 @@ body {
   background-size: cover;
   border-radius: 4px;
   box-shadow: 0px 0px 7px 2px black;
+  background-position-y: center;
 }
 
 .zoomPicWrapper {
@@ -62,6 +63,7 @@ body {
   overflow: hidden;
   transform: translateX(0%);
   box-shadow: 0px 0px 9px 2px black;
+  background-position-y: center;
 }
 
 #leftBtn {
