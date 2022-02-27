@@ -111,7 +111,13 @@ let ngConsump = document.getElementById('ngConsump')
 let elecCost = document.getElementById('elecCost')
 let ngCost = document.getElementById('ngCost')
  
-
+ if (Number(elecCost.value) <0 || Number(ngCost.value) <0 ||
+  Number(elecConsump.value) < 0 || Number(ngConsump.value) <0){
+alert("Entries must be greater than 0")
+      }
+else {
+buildChart(Number(elecCost.value), Number(ngCost.value), Number(elecConsump.value), Number(ngConsump.value))
+}
 buildChart(Number(elecCost.value), Number(ngCost.value), Number(elecConsump.value), Number(ngConsump.value))
 }
     </script>
