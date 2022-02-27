@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="plotly-2.9.0.min.js"></script> -->
+    
+     <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+    <title>Plotly Chart</title>
+  </head>
+  <body>
+      <label for="elecConsump">Electricity Consumption:</label>
+    <input type="number" id="elecConsump" name="elecConsump" value = 46><br>
+       <label for="ngConsump">Natural Gas Consumption Consumption:</label>
+    <input type="number" id="ngConsump" name="ngConsump" value = 54><br>
+       <label for="elecCost">Electricity Cost:</label>
+    <input type="number" id="elecCost" name="elecCost" value = 84><br>
+       <label for="ngCost">Natural Gas Cost:</label>
+    <input type="number" id="ngCost" name="ngCost" value = 16><br><br>
+   <button onclick="createChart()">Create Chart</button>
+
+    <div id="myDiv1" style="width: 600px; height: 250px"></div>
+     <div id="myDiv2" style="width: 600px; height: 250px"></div>
+  
+
+
+
+
+    <script>
+
+function buildChart(encost, ngcost, enconsum, ngconsum) {
+var data = []
+var layout = []
+    var data = [{ values: [encost, ngcost],
+  labels: ['Electricity', 'Natural Gas'],
+   domain: {column: 0},
+  name: 'Energy Cost Profile',
+  hoverinfo: 'label+percent+name',
+  hole: .5,
+  type: 'pie',
+   textposition: 'inside',
+  textinfo: "label+percent",
+  insidetextorientation:  "horizontal",
+  insidetextfont: {color: ['black']},
+   marker: {
+    colors: ['#706E76', '#43BAF7'],
+    line: {color: 'white', width: '2'}
+  }
+},{ values: [enconsum, ngconsum],
+  labels: [ 'Electricity', 'Natural Gas' ],
+   domain: {column: 0},
+  name: 'Energy Consumption Profile',
+  hoverinfo: 'label+percent+name',
+  hole: .75,
+  type: 'pie',
+   textposition: 'outside',
+  textinfo: "label+percent",
+   marker: {
+    colors: ['rgb(0, 138, 57)', '#FFD401'],
+    line: {color: 'white', width: '2'}
+   }, 
+   sort: false,
+
+}];
+
+var layout = {
+  title: {text: `<b>Figure 1 - Energy Cost and Consumption</b>`,  x: .1, y: .1},
+  annotations: [
+    {
+      font: {
+        size: 14
+      },
+      showarrow: false,
+      text: `<b>Energy Cost <br> Profile</b>`,
+      x: 0.18,
+      y: 0.5
+    },
+    {
+      font: {
+        size: 14
+      },
+      showarrow: false,
+      text: `<b>Energy <br>Consumption <br> Profile</b>`,
+      x: 0,
+      y: .85
+    }
+  ],
+  height: 800,
+  width: 1000,
+  showlegend: false,
+  grid: {rows: 1, columns: 2}
+};
+
+Plotly.newPlot('myDiv1', data, layout);
+console.log(data[0].values[0])
+console.log(data[0].values[1])
+console.log(data[1].values[0])
+console.log(data[1].values[1])
+
+let slices = document.querySelectorAll('.slicetext')
+slices[0].style.transform = 'translate(-2%, -10%)'
+slices[2].style.transform = 'translate(4%, 10%)'
+}
+
+createChart()
+
+function createChart() {
+let elecConsump = document.getElementById('elecConsump')
+let ngConsump = document.getElementById('ngConsump')
+let elecCost = document.getElementById('elecCost')
+let ngCost = document.getElementById('ngCost')
+ 
+
+buildChart(Number(elecCost.value), Number(ngCost.value), Number(elecConsump.value), Number(ngConsump.value))
+}
+    </script>
+  </body>
+</html>
