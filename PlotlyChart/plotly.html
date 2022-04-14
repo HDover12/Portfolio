@@ -7,19 +7,21 @@
     <!-- <script src="plotly-2.9.0.min.js"></script> -->
     
      <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+     <link rel="stylesheet" href="plotly.css">
     <title>Plotly Chart</title>
   </head>
   <body>
+    <div class="wrapper">
       <label for="elecConsump">Electricity Consumption:</label>
-    <input type="number" id="elecConsump" name="elecConsump" value = 46><br>
+    <input type="number" id="elecConsump" name="elecConsump" value = 46 min = 0><br><br>
        <label for="ngConsump">Natural Gas Consumption:</label>
-    <input type="number" id="ngConsump" name="ngConsump" value = 54><br>
+    <input type="number" id="ngConsump" name="ngConsump" value = 54 min = 0><br><br>
        <label for="elecCost">Electricity Cost:</label>
-    <input type="number" id="elecCost" name="elecCost" value = 84><br>
+    <input type="number" id="elecCost" name="elecCost" value = 84 min = 0><br><br>
        <label for="ngCost">Natural Gas Cost:</label>
-    <input type="number" id="ngCost" name="ngCost" value = 16><br><br>
+    <input type="number" id="ngCost" name="ngCost" value = 16 min = 0><br><br>
    <button onclick="createChart()">Create Chart</button>
-
+</div>
     <div id="myDiv1" style="width: 600px; height: 250px"></div>
      <div id="myDiv2" style="width: 600px; height: 250px"></div>
   
@@ -36,7 +38,7 @@ var layout = []
   labels: ['Electricity', 'Natural Gas'],
    domain: {column: 0},
   name: 'Energy Cost Profile',
-  hoverinfo: 'label+percent+name',
+  hoverinfo: 'label+percent',
   hole: .5,
   type: 'pie',
    textposition: 'inside',
@@ -51,7 +53,7 @@ var layout = []
   labels: [ 'Electricity', 'Natural Gas' ],
    domain: {column: 0},
   name: 'Energy Consumption Profile',
-  hoverinfo: 'label+percent+name',
+  hoverinfo: 'label+percent',
   hole: .75,
   type: 'pie',
    textposition: 'outside',
@@ -82,11 +84,11 @@ var layout = {
       },
       showarrow: false,
       text: `<b>Energy <br>Consumption <br> Profile</b>`,
-      x: 0,
-      y: .85
+      x: -.05,
+      y: 0.99
     }
   ],
-  height: 800,
+  height: 600,
   width: 1000,
   showlegend: false,
   grid: {rows: 1, columns: 2}
@@ -110,16 +112,13 @@ let elecConsump = document.getElementById('elecConsump')
 let ngConsump = document.getElementById('ngConsump')
 let elecCost = document.getElementById('elecCost')
 let ngCost = document.getElementById('ngCost')
- 
  if (Number(elecCost.value) <0 || Number(ngCost.value) <0 ||
   Number(elecConsump.value) < 0 || Number(ngConsump.value) <0){
 alert("Entries must be greater than 0")
       }
 else {
 buildChart(Number(elecCost.value), Number(ngCost.value), Number(elecConsump.value), Number(ngConsump.value))
-}
-
-}
+}}
     </script>
   </body>
 </html>
